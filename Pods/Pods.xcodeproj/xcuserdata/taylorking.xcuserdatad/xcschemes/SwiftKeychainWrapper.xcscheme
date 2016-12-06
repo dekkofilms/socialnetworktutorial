@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDADB6A589BA00E273214C3C27285B8D"
-               BuildableName = "Pods_socialnetworktutorial.framework"
-               BlueprintName = "Pods-socialnetworktutorial"
+               BlueprintIdentifier = "A28722006BF5DB655E848DC42FFEEA4D"
+               BuildableName = "SwiftKeychainWrapper.framework"
+               BlueprintName = "SwiftKeychainWrapper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDADB6A589BA00E273214C3C27285B8D"
-            BuildableName = "Pods_socialnetworktutorial.framework"
-            BlueprintName = "Pods-socialnetworktutorial"
+            BlueprintIdentifier = "A28722006BF5DB655E848DC42FFEEA4D"
+            BuildableName = "SwiftKeychainWrapper.framework"
+            BlueprintName = "SwiftKeychainWrapper"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

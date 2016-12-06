@@ -17,6 +17,7 @@
 		3B7A86711DF72A5000B4533A /* CustomShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86701DF72A5000B4533A /* CustomShadowView.swift */; };
 		3B7A86741DF72AB300B4533A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86731DF72AB300B4533A /* Constants.swift */; };
 		3B7A86761DF72C3800B4533A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86751DF72C3800B4533A /* RoundButton.swift */; };
+		3BA20B5C1DF75E3100DB267B /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA20B5B1DF75E3100DB267B /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3B7A86701DF72A5000B4533A /* CustomShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShadowView.swift; sourceTree = "<group>"; };
 		3B7A86731DF72AB300B4533A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B7A86751DF72C3800B4533A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		3BA20B5B1DF75E3100DB267B /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		3BA2CFBF1DF762D600EBA2CA /* socialnetworktutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socialnetworktutorial.entitlements; sourceTree = "<group>"; };
 		5A7948EED3595439FD51AF72 /* Pods_socialnetworktutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialnetworktutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E340D4D8194CB3500E0BC39B /* Pods-socialnetworktutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialnetworktutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialnetworktutorial/Pods-socialnetworktutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +72,7 @@
 		3B3215AB1DF719A2008EFF12 /* socialnetworktutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3BA2CFBF1DF762D600EBA2CA /* socialnetworktutorial.entitlements */,
 				3B7A86721DF72AA100B4533A /* Util */,
 				3B3215C21DF71DEE008EFF12 /* Controller */,
 				3B3215C11DF71DE4008EFF12 /* View */,
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3B3215AE1DF719A2008EFF12 /* SignInVC.swift */,
+				3BA20B5B1DF75E3100DB267B /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +174,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2TNDFYS6JC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -257,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA20B5C1DF75E3100DB267B /* FeedVC.swift in Sources */,
 				3B3215AF1DF719A2008EFF12 /* SignInVC.swift in Sources */,
 				3B7A86761DF72C3800B4533A /* RoundButton.swift in Sources */,
 				3B3215AD1DF719A2008EFF12 /* AppDelegate.swift in Sources */,
@@ -386,7 +397,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E340D4D8194CB3500E0BC39B /* Pods-socialnetworktutorial.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = socialnetworktutorial/socialnetworktutorial.entitlements;
 				DEVELOPMENT_TEAM = 2TNDFYS6JC;
 				INFOPLIST_FILE = socialnetworktutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -400,7 +413,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BB35B9883E581E923D1DF1D /* Pods-socialnetworktutorial.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = socialnetworktutorial/socialnetworktutorial.entitlements;
 				DEVELOPMENT_TEAM = 2TNDFYS6JC;
 				INFOPLIST_FILE = socialnetworktutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
