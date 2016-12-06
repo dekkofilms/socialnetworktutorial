@@ -28,7 +28,7 @@ class SignInVC: UIViewController {
     }
 
     //Sign in with Facebook with Firebase
-    @IBAction func facebookBtnTapped(_ sender: UIButton) {
+    @IBAction func facebookBtnTapped(_ sender: AnyObject) {
         
         let facebookLogin = FBSDKLoginManager()
         
@@ -57,7 +57,7 @@ class SignInVC: UIViewController {
     }
 
     //Sign in with email to Firebase
-    @IBAction func signInTapped(_ sender: UIButton) {
+    @IBAction func signInTapped(_ sender: AnyObject) {
         
         if let email = emailField.text, let password = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -76,5 +76,6 @@ class SignInVC: UIViewController {
         }
         
     }
+    
 }
 
