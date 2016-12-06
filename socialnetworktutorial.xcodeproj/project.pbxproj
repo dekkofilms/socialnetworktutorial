@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A841D13D5B5755CFA08912D /* Pods_socialnetworktutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7948EED3595439FD51AF72 /* Pods_socialnetworktutorial.framework */; };
 		3B3215AD1DF719A2008EFF12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3215AC1DF719A2008EFF12 /* AppDelegate.swift */; };
-		3B3215AF1DF719A2008EFF12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3215AE1DF719A2008EFF12 /* ViewController.swift */; };
+		3B3215AF1DF719A2008EFF12 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3215AE1DF719A2008EFF12 /* SignInVC.swift */; };
 		3B3215B21DF719A2008EFF12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B01DF719A2008EFF12 /* Main.storyboard */; };
 		3B3215B41DF719A2008EFF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B31DF719A2008EFF12 /* Assets.xcassets */; };
 		3B3215B71DF719A2008EFF12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B51DF719A2008EFF12 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		2BB35B9883E581E923D1DF1D /* Pods-socialnetworktutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialnetworktutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-socialnetworktutorial/Pods-socialnetworktutorial.release.xcconfig"; sourceTree = "<group>"; };
 		3B3215A91DF719A2008EFF12 /* socialnetworktutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialnetworktutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3215AC1DF719A2008EFF12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B3215AE1DF719A2008EFF12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B3215AE1DF719A2008EFF12 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3B3215B11DF719A2008EFF12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B3215B31DF719A2008EFF12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B3215B61DF719A2008EFF12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,15 +63,39 @@
 		3B3215AB1DF719A2008EFF12 /* socialnetworktutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3B3215C21DF71DEE008EFF12 /* Controller */,
+				3B3215C11DF71DE4008EFF12 /* View */,
+				3B3215C01DF71DDF008EFF12 /* Model */,
 				3B3215BE1DF719CB008EFF12 /* GoogleService-Info.plist */,
 				3B3215AC1DF719A2008EFF12 /* AppDelegate.swift */,
-				3B3215AE1DF719A2008EFF12 /* ViewController.swift */,
 				3B3215B01DF719A2008EFF12 /* Main.storyboard */,
 				3B3215B31DF719A2008EFF12 /* Assets.xcassets */,
 				3B3215B51DF719A2008EFF12 /* LaunchScreen.storyboard */,
 				3B3215B81DF719A2008EFF12 /* Info.plist */,
 			);
 			path = socialnetworktutorial;
+			sourceTree = "<group>";
+		};
+		3B3215C01DF71DDF008EFF12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B3215C11DF71DE4008EFF12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B3215C21DF71DEE008EFF12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B3215AE1DF719A2008EFF12 /* SignInVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		EAD4A26EEC9A86B95133FD1D /* Frameworks */ = {
@@ -216,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B3215AF1DF719A2008EFF12 /* ViewController.swift in Sources */,
+				3B3215AF1DF719A2008EFF12 /* SignInVC.swift in Sources */,
 				3B3215AD1DF719A2008EFF12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +407,7 @@
 				3B3215BD1DF719A2008EFF12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

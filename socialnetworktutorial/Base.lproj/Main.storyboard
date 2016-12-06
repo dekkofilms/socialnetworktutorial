@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="socialnetworktutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="socialnetworktutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,11 +18,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYd-tS-Uk5">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-icon" translatesAutoresizingMaskIntoConstraints="NO" id="a8P-Hf-YYu"/>
+                                </subviews>
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.46666666666666667" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a8P-Hf-YYu" firstAttribute="centerY" secondItem="PYd-tS-Uk5" secondAttribute="centerY" id="JT2-xd-J4Z"/>
+                                    <constraint firstAttribute="height" constant="150" id="PiA-Yz-PPP"/>
+                                    <constraint firstItem="a8P-Hf-YYu" firstAttribute="centerX" secondItem="PYd-tS-Uk5" secondAttribute="centerX" id="l9H-Fe-aI8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-OA-gju">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An account will automatically be created for you on the first time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-DT-lMo">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0078431372549019607" green="0.46666666666666667" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="35O-LY-2hp"/>
+                                    <constraint firstItem="ldg-DT-lMo" firstAttribute="top" secondItem="aj0-OA-gju" secondAttribute="top" constant="8" id="BvO-ip-Cka"/>
+                                    <constraint firstAttribute="trailing" secondItem="ldg-DT-lMo" secondAttribute="trailing" constant="25" id="Cmg-rp-gen"/>
+                                    <constraint firstAttribute="bottom" secondItem="ldg-DT-lMo" secondAttribute="bottom" constant="8" id="eah-6j-Lhh"/>
+                                    <constraint firstItem="ldg-DT-lMo" firstAttribute="leading" secondItem="aj0-OA-gju" secondAttribute="leading" constant="26" id="jZk-Fl-r15"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS6-e7-l1g">
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.46666666666666667" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="M6s-ZJ-qsr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="34"/>
+                                <state key="normal" title="Facebook Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- OR -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhI-0W-kSA">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="EEy-cO-UV9">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-gd-ugY">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-aB-6Iv">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5E8-kY-zv4">
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.46666666670000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="34"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fhI-0W-kSA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3aB-bK-t4I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aj0-OA-gju" secondAttribute="bottom" id="4UR-RR-ZeU"/>
+                            <constraint firstItem="bS6-e7-l1g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4yV-rT-d1n"/>
+                            <constraint firstItem="PYd-tS-Uk5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5RN-wW-99M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EEy-cO-UV9" secondAttribute="trailing" id="BhM-vd-hgo"/>
+                            <constraint firstItem="PYd-tS-Uk5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FxF-5I-cB2"/>
+                            <constraint firstItem="bS6-e7-l1g" firstAttribute="top" secondItem="PYd-tS-Uk5" secondAttribute="bottom" constant="70" id="IJN-Kk-Ztc"/>
+                            <constraint firstItem="fhI-0W-kSA" firstAttribute="top" secondItem="bS6-e7-l1g" secondAttribute="bottom" constant="33" id="L17-Px-BNc"/>
+                            <constraint firstItem="EEy-cO-UV9" firstAttribute="top" secondItem="fhI-0W-kSA" secondAttribute="bottom" constant="30" id="N25-KW-cKP"/>
+                            <constraint firstItem="fhI-0W-kSA" firstAttribute="centerX" secondItem="bS6-e7-l1g" secondAttribute="centerX" id="Zt2-Wh-wxA"/>
+                            <constraint firstAttribute="trailing" secondItem="aj0-OA-gju" secondAttribute="trailing" id="dCl-Gq-tKa"/>
+                            <constraint firstItem="aj0-OA-gju" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fUb-dd-Gd6"/>
+                            <constraint firstItem="fhI-0W-kSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="iOr-Cf-vXK"/>
+                            <constraint firstAttribute="trailing" secondItem="PYd-tS-Uk5" secondAttribute="trailing" id="rp7-Xy-NrJ"/>
+                            <constraint firstItem="EEy-cO-UV9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s3j-Oh-rNd"/>
+                            <constraint firstItem="bS6-e7-l1g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vhA-LU-UuW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="devslopes-icon" width="102" height="72"/>
+    </resources>
 </document>
