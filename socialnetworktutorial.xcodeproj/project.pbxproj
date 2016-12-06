@@ -12,6 +12,7 @@
 		3B3215B21DF719A2008EFF12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B01DF719A2008EFF12 /* Main.storyboard */; };
 		3B3215B41DF719A2008EFF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B31DF719A2008EFF12 /* Assets.xcassets */; };
 		3B3215B71DF719A2008EFF12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215B51DF719A2008EFF12 /* LaunchScreen.storyboard */; };
+		3B3215BF1DF719CB008EFF12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3215BE1DF719CB008EFF12 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3B3215B31DF719A2008EFF12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B3215B61DF719A2008EFF12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B3215B81DF719A2008EFF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3215BE1DF719CB008EFF12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3B3215AB1DF719A2008EFF12 /* socialnetworktutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3B3215BE1DF719CB008EFF12 /* GoogleService-Info.plist */,
 				3B3215AC1DF719A2008EFF12 /* AppDelegate.swift */,
 				3B3215AE1DF719A2008EFF12 /* ViewController.swift */,
 				3B3215B01DF719A2008EFF12 /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3215B71DF719A2008EFF12 /* LaunchScreen.storyboard in Resources */,
+				3B3215BF1DF719CB008EFF12 /* GoogleService-Info.plist in Resources */,
 				3B3215B41DF719A2008EFF12 /* Assets.xcassets in Resources */,
 				3B3215B21DF719A2008EFF12 /* Main.storyboard in Resources */,
 			);
