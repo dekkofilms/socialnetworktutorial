@@ -30,11 +30,6 @@ class SignInVC: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     //Sign in with Facebook with Firebase
     @IBAction func facebookBtnTapped(_ sender: AnyObject) {
         
