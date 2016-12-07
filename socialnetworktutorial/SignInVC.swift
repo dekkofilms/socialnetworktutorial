@@ -56,7 +56,8 @@ class SignInVC: UIViewController {
             } else {
                 print("TAYLOR: Successfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
@@ -69,7 +70,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("TAYLOR: Signed in with Firebase using Email!")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -78,7 +80,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("TAYLOR: User successfully created with email in Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -87,8 +90,9 @@ class SignInVC: UIViewController {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
         //KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("TAYLOR: Saved the keychain")
         performSegue(withIdentifier: "goToFeed", sender: nil)

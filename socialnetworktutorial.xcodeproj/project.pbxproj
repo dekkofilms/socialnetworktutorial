@@ -19,6 +19,7 @@
 		3B7A86761DF72C3800B4533A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A86751DF72C3800B4533A /* RoundButton.swift */; };
 		3BA20B5C1DF75E3100DB267B /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA20B5B1DF75E3100DB267B /* FeedVC.swift */; };
 		3BD4E5911DF86CE600619C39 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4E5901DF86CE600619C39 /* PostCell.swift */; };
+		3BD4E5941DF8B72300619C39 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4E5931DF8B72300619C39 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3BA20B5B1DF75E3100DB267B /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		3BA2CFBF1DF762D600EBA2CA /* socialnetworktutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socialnetworktutorial.entitlements; sourceTree = "<group>"; };
 		3BD4E5901DF86CE600619C39 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		3BD4E5931DF8B72300619C39 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		5A7948EED3595439FD51AF72 /* Pods_socialnetworktutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialnetworktutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E340D4D8194CB3500E0BC39B /* Pods-socialnetworktutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialnetworktutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialnetworktutorial/Pods-socialnetworktutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		3B3215AB1DF719A2008EFF12 /* socialnetworktutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3BD4E5921DF8B6C900619C39 /* Services */,
 				3BA2CFBF1DF762D600EBA2CA /* socialnetworktutorial.entitlements */,
 				3B7A86721DF72AA100B4533A /* Util */,
 				3B3215C21DF71DEE008EFF12 /* Controller */,
@@ -121,6 +124,14 @@
 				3B7A86731DF72AB300B4533A /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		3BD4E5921DF8B6C900619C39 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3BD4E5931DF8B72300619C39 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		EAD4A26EEC9A86B95133FD1D /* Frameworks */ = {
@@ -277,6 +288,7 @@
 				3B3215AD1DF719A2008EFF12 /* AppDelegate.swift in Sources */,
 				3B7A86711DF72A5000B4533A /* CustomShadowView.swift in Sources */,
 				3B7A86741DF72AB300B4533A /* Constants.swift in Sources */,
+				3BD4E5941DF8B72300619C39 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
