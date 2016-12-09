@@ -36,7 +36,7 @@ class DataService {
     }
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
-        //If it's not there, Firebase will auto create it for you
+        //If it's not there, Firebase will auto create a new user
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
