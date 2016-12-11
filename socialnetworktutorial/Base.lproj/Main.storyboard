@@ -152,11 +152,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.46666666666666667" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="s22-aN-xzS" secondAttribute="bottom" constant="8" id="0Sa-vq-gv0"/>
+                                    <constraint firstAttribute="bottom" secondItem="twd-hT-58s" secondAttribute="bottom" constant="3.5" id="5vl-Mo-7XZ"/>
                                     <constraint firstAttribute="height" constant="75" id="8I3-EY-AYQ"/>
-                                    <constraint firstItem="twd-hT-58s" firstAttribute="centerY" secondItem="s22-aN-xzS" secondAttribute="centerY" constant="-16" id="GIH-56-wPl"/>
-                                    <constraint firstItem="twd-hT-58s" firstAttribute="centerX" secondItem="uxE-Hb-CWh" secondAttribute="centerX" id="a1e-W8-rws"/>
+                                    <constraint firstItem="twd-hT-58s" firstAttribute="leading" secondItem="s22-aN-xzS" secondAttribute="trailing" constant="103.5" id="TCa-mi-lwk"/>
+                                    <constraint firstAttribute="trailing" secondItem="twd-hT-58s" secondAttribute="trailing" constant="154" id="TLc-U3-JOm"/>
+                                    <constraint firstItem="s22-aN-xzS" firstAttribute="leading" secondItem="uxE-Hb-CWh" secondAttribute="leading" constant="8" id="h9i-Il-chz"/>
                                     <constraint firstItem="s22-aN-xzS" firstAttribute="leading" secondItem="uxE-Hb-CWh" secondAttribute="leading" constant="8" id="hKg-cX-QEx"/>
-                                    <constraint firstItem="twd-hT-58s" firstAttribute="centerY" secondItem="s22-aN-xzS" secondAttribute="centerY" id="mwi-aW-9sf"/>
                                     <constraint firstItem="s22-aN-xzS" firstAttribute="top" secondItem="uxE-Hb-CWh" secondAttribute="top" constant="39" id="uh3-bH-sxg"/>
                                 </constraints>
                             </view>
@@ -164,12 +166,16 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-E7-Ivr">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="3PC-LI-7IF">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="3PC-LI-7IF">
                                                 <color key="backgroundColor" red="0.61176470588235299" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="AYP-js-fvy"/>
                                                     <constraint firstAttribute="width" constant="59" id="lX1-Gg-zde"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Sza-Uc-IQR" appends="YES" id="t2A-jD-scK"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPZ-P3-vLs">
                                                 <nil key="textColor"/>
@@ -318,6 +324,7 @@
                     </view>
                     <connections>
                         <outlet property="feedTable" destination="qAW-K7-SDO" id="Tg6-Zm-epR"/>
+                        <outlet property="imageAdd" destination="3PC-LI-7IF" id="nCP-bw-vgE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignin" id="84f-TC-mtc"/>
                     </connections>
                 </viewController>
@@ -325,6 +332,11 @@
                 <tapGestureRecognizer id="OfV-IC-xnM">
                     <connections>
                         <action selector="signOutTapped:" destination="MfF-qs-mrL" id="twr-G9-cZd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Sza-Uc-IQR">
+                    <connections>
+                        <action selector="addImageTapped:" destination="MfF-qs-mrL" id="1RO-iC-fkb"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
