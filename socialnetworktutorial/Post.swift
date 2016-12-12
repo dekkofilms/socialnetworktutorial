@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 class Post {
+    
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
@@ -65,6 +66,5 @@ class Post {
         
         _postREF.child("likes").setValue(_likes)
     }
-    
     
 }
